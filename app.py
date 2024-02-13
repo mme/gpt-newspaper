@@ -1,10 +1,12 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from multiprocessing import Process
 from backend.server import backend_app
 from flask import Flask, send_from_directory
 from flask_cors import CORS
 
 CORS(backend_app)
-
 
 frontend_app = Flask(__name__, static_folder='frontend')
 
